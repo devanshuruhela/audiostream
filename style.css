@@ -1,10 +1,11 @@
 /* Images created by: https://unsplash.com/@pawel_czerwinski */
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 html {
   box-sizing: border-box;
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   min-height: 100vh;
   background: #c9ced3;
@@ -15,15 +16,32 @@ body {
   font-size: 12px;
 }
 
+.player-container{
+  top: 50px;
+  left: 50px;
+  transform: translateY(50% , 50%);
+  height:500px;
+  width:400px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px 5px rgba(0, 0,0, 0.2);
+}
 
 
 .img-container {
-
+  height:300px;
+  width:300px;
   position: relative;
   top: -50px;
   left: 50px;
 }
-
+.img-container img{
+  height: 100%;
+  width: 100%;
+  object-fit:cover;
+   border-radius: 20px;
+   box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.4);
+}
 
 h2 {
   font-size: 25px;
@@ -73,12 +91,16 @@ h3 {
 }
 
 .fas {
+  cursor: pointer;
   font-size: 30px;
   color: rgb(129, 129, 129);
   margin-right: 30px;
-
+  user-select: none;
 }
-
+.fas:hover
+{
+  filter: brightness(80%);
+}
 
 
 .main-button {
@@ -90,6 +112,10 @@ h3 {
 /* Media Query: iPhone (Vertical) */
 @media screen and (max-width: 376px) {
 
+  .player-container
+  {
+    width: 95vw;
+  }
 
   .img-container {
     left: 29px;
